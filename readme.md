@@ -1,11 +1,11 @@
-# hapi-webpack-plugin
+# @jimlowrey/hapi-webpack-plugin
 
 [![Maintenance Status][status-image]][status-url] [![Dependency Status][deps-image]][deps-url] [![NPM version][npm-image]][npm-url]
 
 
 [Webpack](http://webpack.github.io) middleware for [Hapi](https://github.com/hapijs/hapi). Supports HMR.
 
-
+This is a fork of Simon Degraeve's [hapi-webpack-plugin](https://github.com/SimonDegraeve/hapi-webpack-plugin).  Webpack and Babel have been updated to 03/01/2022 versions.
 
 ## Webpack Version
 
@@ -21,7 +21,7 @@ Please download the appropriate version for you.
 ## Installation
 
 ```js
-npm install hapi-webpack-plugin
+npm install @jimlowrey/hapi-webpack-plugin
 ```
 
 ## Usage
