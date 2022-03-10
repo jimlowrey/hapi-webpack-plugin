@@ -1,7 +1,8 @@
 /**
  * Import dependencies
  */
-import 'babel-polyfill';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 import Pack from '../package.json';
 import Path from 'path';
 import Webpack from 'webpack';
@@ -18,7 +19,7 @@ function register(server, options) {
   if (typeof options === 'string') {
     const configPath = Path.resolve(process.cwd(), options);
     config = require(configPath);
-    compiler = new Webpack(config);
+    compiler = Webpack(config);
   }
   else {
     config = options;
@@ -74,7 +75,7 @@ function register(server, options) {
   });
 
   // Expose compiler
-  server.expose({ compiler });
+  server.expose({ compiler, webpackDevMiddleware, webpackHotMiddleware });
 }
 
 exports.plugin = {
